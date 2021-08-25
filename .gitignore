@@ -1,6 +1,8 @@
-# Jupyter Notebook
-.ipynb_checkpoints
+# Ignore everything
+*
 
-# IPython
-profile_default/
-ipython_config.py
+# But not these files...
+!.gitignore
+!data/*
+!fig/
+
