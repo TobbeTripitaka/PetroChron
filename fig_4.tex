@@ -1,0 +1,132 @@
+% tikzpic.tex
+\documentclass[crop,tikz]{standalone}% 'crop' is the default for v1.0, before it was 'preview'
+%\usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+
+%\usetikzlibrary{decorations.pathreplacing,}
+\usetikzlibrary{decorations.text,  shapes.geometric}
+\usetikzlibrary{math}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows.meta}
+
+\usepackage{setspace}
+% 3200000
+
+\input{tikz_labels}
+
+
+
+\begin{document}
+	\begin{tikzpicture}[]
+			\tikzmath{\AxW = 16; 
+			\xW = 2*3000;
+			\MapScale = \AxW / \xW;} 
+		
+		
+%3a	
+	\begin{scope}[shift={(0,0)}]
+			\node [] (a) at (0,0) {\includegraphics[width=\AxW cm] {fig/fig_4a.pdf}};
+
+			\path (0,0) pic[scale=1,color=black] {land labels};
+			\path (0,0) pic[scale=1,color=black] {region labels};
+
+			\node [anchor=center] at  (-\AxW/2.3,\AxW/2.4){\Huge{\textbf{(a)}}};
+
+			\node [anchor=north west] (pb) at (12,7.7) {\includegraphics[width=7.5 cm] {fig/fig_4a_pb.pdf}};
+			\path (pb) pic[scale=1,color=black] {pb labels};
+
+			\node [anchor=north west,  align=left]  (pb) at (3.4,2.05) {\textbf{(i)}};
+
+			\node [anchor=north west,  align=left]  (pb) at (9.2,3) {\large \sffamily Inset (i):\\\sffamily \large Prydz Bay};
+
+	
+			
+			\node [anchor=south west]  (tam) at (12,-7.7) {\includegraphics[width= 7.5 cm] {fig/fig_4a_tam.pdf}};
+			\path (tam) pic[scale=1,color=black] {tam labels};
+			
+			
+			\node [anchor=north west,  align=left]  (pb) at (-1,-0.1) {\textbf{(ii)}};
+			\node [anchor=south west,  align=left]  (tam) at (9.2, -7.7) {\large \sffamily Inset (ii):\\ \sffamily \large Transantarctic \\ \sffamily \large Mountains};
+			
+%   	\def\shiftup#1{\raisebox{1.5ex}}
+%		\draw[-{Latex[length=4mm, width=2mm]}, densely dashed, postaction={decorate,decoration={text along path,text align=center,text={|\sffamily\small\shiftup|Prydz Bay}}}]  (6.25, 1.7)  to [out=20, in=200, looseness=1] (8.7, 3.8);
+%	
+%	\def\shiftdown#1{\raisebox{-2.5ex}}
+%		 \draw[-{Latex[length=4mm, width=2mm]}, densely dashed, postaction={decorate,decoration={text along path,text align=center,text={|\sffamily\small\shiftdown|Transantarctic Mountains}}}]  (0.3, -3.9)  to [out=270,in=200, looseness=1.5] (8.7, -5);
+%	
+%	
+	
+	
+	\end{scope}	
+	
+	
+% 3b
+		 \begin{scope}[shift={(0,-16.2)}]
+			\node [] (hf_max) at (0,0) {\includegraphics[width=\AxW cm] {fig/fig_4b.pdf}};
+			
+			\path (0,0) pic[scale=1,color=black] {land labels};
+			\path (0,0) pic[scale=1,color=black] {region labels};
+			
+				
+			
+			\node [anchor=north west] (pb) at (12,7.7) {\includegraphics[width=7.5 cm] {fig/fig_4b_pb.pdf}};
+			\path (pb) pic[scale=1,color=black] {pb labels};
+		
+
+		
+			\node [anchor=center] at  (-\AxW/2.3,\AxW/2.4){\Huge{\textbf{(b)}}};
+			
+			
+			\node [anchor= north west] (hf_max) at (8,0) {\includegraphics[trim=0 0 100 0, clip,] {fig/fig_4a_legend.pdf}};
+			
+			\node [anchor= north west] (hf_max) at (13,0) {\includegraphics[trim=0 0 100 0, clip,] {fig/fig_4c_legend.pdf}};
+%			
+%			   	\def\shiftup#1{\raisebox{1.5ex}}
+%			\draw[-{Latex[length=4mm, width=2mm]}, densely dashed, postaction={decorate,decoration={text along path,text align=center,text={|\sffamily\small\shiftup|Prydz Bay}}}]  (6.2, 1.7)  to [out=20, in=200, looseness=1] (8.7, 3.8);
+%			
+
+
+			\node [anchor=north west,  align=left]  (pb) at (3.2,2.05) {\textbf{(iii)}};
+
+\node [anchor=north west,  align=left]  (pb) at (9.2,3) {\sffamily \large Inset (iii):\\\sffamily \large  Prydz Bay};
+
+	\end{scope}	
+	
+	
+	
+
+	\begin{scope}[shift={(0,-32.4)}]
+	\node [] (hf_max) at (0,0) {\includegraphics[width=\AxW cm] {fig/fig_4c.pdf}};
+	
+	\path (0,0) pic[scale=1,color=black] {land labels};
+	\path (0,0) pic[scale=1,color=black] {region labels};
+	
+	\node [anchor=south west]  (tam) at (12,-7.7) {\includegraphics[width= 7.5 cm] {fig/fig_4c_tam.pdf}};
+	\path (tam) pic[scale=1,color=black] {tam labels};
+
+	
+	
+	
+	\node [anchor=center] at  (-\AxW/2.3,\AxW/2.4){\Huge{\textbf{(c)}}};
+	
+				
+	\node [anchor=north west,  align=left]  (pb) at (-1,-0.1) {\textbf{(iv)}};
+	\node [anchor=south west,  align=left]  (tam) at (9.2, -7.7) {\sffamily \large Inset (iv):\\ \sffamily \large Transantarctic \\ \sffamily\large  Mountains};
+	
+	
+
+%	\def\shiftdown#1{\raisebox{-2.5ex}}
+%\draw[-{Latex[length=4mm, width=2mm]}, densely dashed, postaction={decorate,decoration={text along path,text align=center,text={|\sffamily\small\shiftdown|Transantarctic Mountains}}}]  (0.3, -4)  to [out=270,in=200, looseness=1.5] (8.7, -5);
+%
+
+
+
+	
+\end{scope}	
+
+
+
+\end{tikzpicture}
+
+
+
+\end{document}\textsl{}

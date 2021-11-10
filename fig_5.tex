@@ -1,0 +1,95 @@
+% tikzpic.tex
+\documentclass[crop,tikz]{standalone}% 'crop' is the default for v1.0, before it was 'preview'
+%\usetikzlibrary{...}% tikz package already loaded by 'tikz' option
+
+%\usetikzlibrary{decorations.pathreplacing,}
+\usetikzlibrary{decorations.text,  shapes.geometric}
+\usetikzlibrary{math}
+
+\usepackage{setspace}
+% 3200000
+
+\input{tikz_labels}
+
+\begin{document}
+	\begin{tikzpicture}[]
+		\tikzmath{\AxW = 16; 
+			\xW = 2*3000;
+			\MapScale = \AxW / \xW;} 
+		
+		
+		\begin{scope}[shift={(0,0)}]
+			\node [] (hf_max) at (0,0) {\includegraphics[width=\AxW cm] {fig/fig_5a.pdf}};
+			
+			\path (0,0) pic[scale=1,color=black] {land labels};
+			\path (0,0) pic[scale=1,color=black] {region labels};
+			
+			
+			\node [anchor=south west] (hf_max) at (-\AxW/2.05,-\AxW/2.05) {\includegraphics[] {fig/fig_5a_legend.pdf}};
+			
+			\node [anchor=center] at  (-\AxW/2.3,\AxW/2.3){\Huge{\textbf{(a)}}};
+			
+		\end{scope}	
+		
+		
+		
+		\begin{scope}[shift={(16.2,0)}]
+			\node [] (hf_max) at (0,0) {\includegraphics[width=15 cm] {fig/fig_5b.pdf}};
+
+			
+		%	\node [anchor=center] at  (-\AxW/2.3,\AxW/2.3){\Huge{\textbf{(b)}}};
+			
+		\end{scope}			
+		
+		\begin{scope}[shift={(0,-16.2)}]
+			\node [] (hf_max) at (0,0) {\includegraphics[width=\AxW cm] {fig/fig_5c.pdf}};
+			
+			\path (0,0) pic[scale=1,color=black] {land labels};
+			\path (0,0) pic[scale=1,color=black] {region labels};
+			
+			
+			\node [anchor=south west] (hf_max) at (-\AxW/2.05,-\AxW/2.05) {\includegraphics[] {fig/fig_5c_legend.pdf}};
+			
+			\node [anchor=center] at  (-\AxW/2.3,\AxW/2.3){\Huge{\textbf{(b)}}};
+			
+			
+			
+			
+	
+		\end{scope}		
+		
+		\begin{scope}[shift={(16.2,-16.2)}]
+			\node [] (hf_max) at (0,0) {\includegraphics[width=15 cm] {fig/fig_5d.pdf}};
+			
+			
+		\end{scope}		
+		
+		
+
+		\begin{scope}[shift={(0,-32.4)}]
+			\node [] (hf_max) at (0,0) {\includegraphics[width=\AxW cm] {fig/fig_5e.pdf}};
+			
+			\path (0,0) pic[scale=1,color=black] {land labels};
+			\path (0,0) pic[scale=1,color=black] {region labels};
+			
+			
+			\node [anchor=south west] (hf_max) at (-\AxW/2.05,-\AxW/2.05) {\includegraphics[] {fig/fig_5e_legend.pdf}};
+			
+			\node [anchor=center] at  (-\AxW/2.3,\AxW/2.3){\Huge{\textbf{(c)}}};
+			
+		\end{scope}	
+		
+		
+		\begin{scope}[shift={(16.2,-32.4)}]
+			\node [] (hf_max) at (0,0) {\includegraphics[width=15 cm] {fig/fig_5f.pdf}};
+			
+				
+		\end{scope}			
+		
+		
+		
+	\end{tikzpicture}
+	
+	
+	
+\end{document}\textsl{}
