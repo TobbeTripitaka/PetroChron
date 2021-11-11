@@ -2,5 +2,7 @@
 ## Code for analysing and visualise the PetroChron database. 
 
 --- 
-Code and figures will be added when the manuscript is submitted. 
 
+Jupyter notebook to generate the figures in the paper and some analysis. 
+
+LaTeX files usimg TikZ to generate labelled panels with subfigures etc. 
